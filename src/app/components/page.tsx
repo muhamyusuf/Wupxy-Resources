@@ -1,5 +1,5 @@
 import React from 'react';
 
-export default function Code() {
+export default function ComponentsPage() {
   return <div>Code Section</div>;
 }

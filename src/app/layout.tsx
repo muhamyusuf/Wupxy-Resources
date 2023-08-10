@@ -1,4 +1,4 @@
-import '../globals.css';
+import './globals.css';
 import type { Metadata } from 'next';
 import Providers from '@/components/Providers/Providers';
 import Navbar from '@/components/Navbar';
@@ -17,10 +17,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <Providers>
-          <div className="container px-2 md:px-8">
+          <div className="container px-2 bg-white md:px-8 dark:bg-black">
             <Navbar />
 
-            <div>{children}</div>
+            {children}
           </div>
         </Providers>
       </body>

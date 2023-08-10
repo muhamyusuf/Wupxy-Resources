@@ -20,7 +20,7 @@ export default function Navbar() {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
 
   return (
-    <nav className="flex items-center justify-between w-full font-amiko">
+    <nav className="sticky z-50 flex items-center justify-between w-full py-4 font-amiko">
       <div className="flex items-center gap-4">
         <Link href={'/'} className="font-semibold textGradient">
           Wupxy.
@@ -37,7 +37,7 @@ export default function Navbar() {
         <Link
           href={'#github'}
           className={cn(
-            buttonVariants({ variant: 'default', size: 'icon' }),
+            buttonVariants({ variant: 'link', size: 'icon' }),
             'text-xl',
           )}
         >
