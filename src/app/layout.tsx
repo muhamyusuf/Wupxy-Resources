@@ -1,10 +1,12 @@
-import './globals.css';
 import type { Metadata } from 'next';
+import './globals.css';
+
 import Providers from '@/components/Providers/Providers';
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Wupxy Resources',
+  title: { default: 'Wupxy Resources', template: '%s | Wupxy' },
   description: 'Resources for developers',
 };
 
@@ -21,6 +23,8 @@ export default function RootLayout({
             <Navbar />
 
             {children}
+
+            <Footer />
           </div>
         </Providers>
       </body>

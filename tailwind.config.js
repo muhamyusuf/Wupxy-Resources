@@ -27,7 +27,9 @@ module.exports = {
         black: '#000000',
         white: '#ffffff',
         blue: '#001462',
+        blueLight: '#0621ac',
         army: '#003E13',
+        armyLight: '#0c6f27',
         gray: '#c7c7c7',
       },
       borderRadius: {

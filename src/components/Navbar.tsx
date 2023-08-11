@@ -1,20 +1,14 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
-import React, { useState } from 'react';
-import { DarkMode } from '@/components/DarkMode';
-import { HomeIcon } from '@radix-ui/react-icons';
-import { BsGithub } from 'react-icons/bs';
-import { Button, buttonVariants } from '@/components/ui/Button';
-import { cn } from '@/lib/utils';
-import { icons } from 'react-icons';
 
-const navLinks = [
-  {
-    name: 'Components',
-    href: '/components',
-  },
-];
+import { BsGithub } from 'react-icons/bs';
+
+import { DarkMode } from '@/components/DarkMode';
+import { buttonVariants } from '@/components/ui/Button';
+import { cn } from '@/lib/utils';
+import { navLinks } from '@/datas/links';
 
 export default function Navbar() {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
@@ -26,18 +20,20 @@ export default function Navbar() {
           Wupxy.
         </Link>
 
-        {navLinks.map((link, index) => (
-          <Link href={link.href} key={index} className="font-normal">
-            {link.name}
-          </Link>
-        ))}
+        <div>
+          {navLinks.map((link, index) => (
+            <Link href={link.href} key={index} className="font-normal">
+              {link.name}
+            </Link>
+          ))}
+        </div>
       </div>
 
       <div className="flex items-center justify-center">
         <Link
-          href={'#github'}
+          href={'https://github.com/muhamyusuf/Wupxy-Resources'}
           className={cn(
-            buttonVariants({ variant: 'link', size: 'icon' }),
+            buttonVariants({ variant: 'ghost', size: 'icon' }),
             'text-xl',
           )}
         >

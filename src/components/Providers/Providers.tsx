@@ -1,7 +1,8 @@
 'use client';
 
 import { ReactNode } from 'react';
-import { ThemeProvider } from './ThemeProvider';
+
+import { ThemeProvider } from '@/components/Providers/ThemeProvider';
 
 interface LayoutProps {
   children: ReactNode;
